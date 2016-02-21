@@ -18,7 +18,7 @@ namespace Spree.Domain
 
         public void Handle(ProduktInDenWarenkorbLegen command)
         {
-            Log.Information("Begin ProduktInDenWarenkorbLegen");
+            Log.Information("Beginn ProduktInDenWarenkorbLegen");
             _aggregates
                 .Provide<Warenkorb>()
                 .With(command)
@@ -26,7 +26,7 @@ namespace Spree.Domain
                 .CatchFault(handleFaults)
                 .CatchException(handleExceptions);
 
-            Log.Information("End ProduktInDenWarenkorbLegen");
+            Log.Information("Ende ProduktInDenWarenkorbLegen");
         }
 
         private void handleFaults(Fault obj)

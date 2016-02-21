@@ -15,7 +15,7 @@ namespace Spree.Domain.Model
 
         public void ProduktHinzufügen(int produktId)
         {
-            Log.Information("Add Product {productId}", produktId);
+            Log.Information("Produkt {productId} hinzufügen", produktId);
 
             Changes.Add(new ProduktWurdeInWarenkorbGelegt
             {

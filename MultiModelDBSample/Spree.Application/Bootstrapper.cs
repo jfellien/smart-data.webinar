@@ -2,6 +2,7 @@
 using LightInject;
 using Serilog;
 using Spree.Domain;
+using Spree.QueryModel;
 
 namespace Spree.Application
 {
@@ -17,21 +18,15 @@ namespace Spree.Application
             Container = container;
             var aggregates = SetupAggreagates();
 
-            Log.Information("Prepare Component Registrations");
-
             Container.RegisterInstance(aggregates);
             Container.Register<WarenkorbCommands>();
-
-            Log.Information("Components registered");
         }
 
         static Aggregates SetupAggreagates()
         {
-            Log.Information("Prepare Aggregates Repository");
-
             var aggregates = Aggregates.CreateWith(new InMemoryEventStore());
-            
-            // EventHandler hinzufügen
+
+            aggregates.PublishNewStateTo(new WarenkorbEvents());
 
             return aggregates;
         }

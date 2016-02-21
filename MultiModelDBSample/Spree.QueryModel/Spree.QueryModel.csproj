@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Fluent-CQRS">
+      <HintPath>..\packages\Fluent-CQRS\lib\portable-net45+netcore45+wpa81\Fluent-CQRS.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\packages\Serilog\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10\Serilog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,7 +53,14 @@
     <Compile Include="Queries\AlleProdukteDerKategorie.cs" />
     <Compile Include="Queries\WarenkorbDesUsers.cs" />
     <Compile Include="Warenkorb.cs" />
+    <Compile Include="WarenkorbEvents.cs" />
     <Compile Include="Warenkörbe.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Spree.Domain\Spree.Domain.csproj">
+      <Project>{5061BD1A-87CA-40F9-9EBA-53F7264FFF3D}</Project>
+      <Name>Spree.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

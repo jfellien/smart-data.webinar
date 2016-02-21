@@ -1,4 +1,7 @@
-﻿namespace Spree.QueryModel
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Spree.QueryModel
 {
     public class Warenkorb
     {
@@ -6,9 +9,11 @@
         {
             Id = id;
             UserId = userId;
+            Produkte = new List<Produkt>();
         }
 
         public string Id { get; private set; }
         public string UserId { get; private set; }
+        public IList<Produkt> Produkte { get; set; }
     }
 }
