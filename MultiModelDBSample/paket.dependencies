@@ -1,3 +1,5 @@
 source "https://www.nuget.org/api/v2"
 
 nuget Fluent-CQRS
+nuget LightInject ~> 3.0
+nuget Serilog

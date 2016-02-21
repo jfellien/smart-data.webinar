@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Fluent-CQRS">
+      <HintPath>..\packages\Fluent-CQRS\lib\portable-net45+netcore45+wpa81\Fluent-CQRS.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\packages\Serilog\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10\Serilog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\ProduktInDenWarenkorbLegen.cs" />
+    <Compile Include="Events\ProduktWurdeInWarenkorbGelegt.cs" />
+    <Compile Include="Model\Warenkorb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Warenkorb\Commands\ProduktInDenWarenkorbLegen.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Warenkorb\Model\" />
+    <Compile Include="WarenkorbCommands.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
