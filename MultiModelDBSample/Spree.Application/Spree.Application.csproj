@@ -70,6 +70,10 @@
       <Project>{5061BD1A-87CA-40F9-9EBA-53F7264FFF3D}</Project>
       <Name>Spree.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Spree.Infrastructure\Spree.Infrastructure.csproj">
+      <Project>{D2A383C5-7298-4980-8F0E-37932727C8B9}</Project>
+      <Name>Spree.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Spree.QueryModel\Spree.QueryModel.csproj">
       <Project>{CD5BD427-D714-4C6C-960F-7C3D152B716A}</Project>
       <Name>Spree.QueryModel</Name>

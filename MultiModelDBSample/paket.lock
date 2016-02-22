@@ -3,4 +3,5 @@ NUGET
   specs:
     Fluent-CQRS (2.0.4.2)
     LightInject (3.0.2.7)
+    RestSharp (105.2.3)
     Serilog (1.5.14)

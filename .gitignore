@@ -287,3 +287,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Disable OrientDB Folder
+orientdb-enterprise-2.1.11/
