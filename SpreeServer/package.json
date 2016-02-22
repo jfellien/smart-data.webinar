@@ -1,0 +1,8 @@
+{
+    "version": "1.0.0",
+    "dependencies": {
+        "orientjs": "*",
+        "restify": "*"
+    },
+    "main": "app.js"
+}

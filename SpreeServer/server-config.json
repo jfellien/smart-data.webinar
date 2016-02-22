@@ -1,0 +1,27 @@
+{
+    "web":{
+        "host":"127.0.0.1",
+        "port":"3000"
+    },
+    "dbServer":{
+        "host":"127.0.0.1",
+        "port":"2424",
+        "username":"root",
+        "password":"DD77794872523D9A3DD7221F73AD1BDADDDF478E97626FDC9F2A05A97385E44E"
+    },
+    "eventStore":{
+        "dbName":"eventStore",
+        "dbType":"document",
+        "storageType":"plocal",
+        "name" : "Event",
+        "username":"admin",
+        "password":"admin"
+    },
+    "readModelStore":{
+        "dbName":"readModel",
+        "dbType":"graph",
+        "storageType":"plocal",
+        "username":"admin",
+        "password":"admin"
+    }
+}
