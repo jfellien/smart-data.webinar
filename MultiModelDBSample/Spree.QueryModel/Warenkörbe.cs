@@ -1,4 +1,6 @@
 ﻿using System.Linq;
+using Spree.Contracts;
+using Spree.Infrastructure.Repositories;
 using Spree.QueryModel.Queries;
 
 namespace Spree.QueryModel

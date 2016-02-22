@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Spree.Contracts;
 
-namespace Spree.QueryModel
+namespace Spree.Infrastructure.Repositories
 {
-    class MockedProdukteRepository
+    public class MockedProdukteRepository
     {
         public static IEnumerable<Produkt> GetAll()
         {

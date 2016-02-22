@@ -1,4 +1,4 @@
-﻿namespace Spree.QueryModel
+﻿namespace Spree.Contracts
 {
     public class Produkt
     {

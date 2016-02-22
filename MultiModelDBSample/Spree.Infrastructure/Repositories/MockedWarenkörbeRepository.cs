@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using Serilog;
+using Spree.Contracts;
 
-namespace Spree.QueryModel
+namespace Spree.Infrastructure.Repositories
 {
-    class MockedWarenkörbeRepository
+    public class MockedWarenkörbeRepository
     {
         static readonly IList<Warenkorb> Database = new List<Warenkorb>
             {

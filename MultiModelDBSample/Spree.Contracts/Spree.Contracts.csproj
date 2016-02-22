@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{143F3F02-C005-4560-B974-4A5E1461652A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{FE5AF10C-D253-4856-80D6-E4140B49A3F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Spree.Application</RootNamespace>
-    <AssemblyName>Spree.Application</AssemblyName>
+    <RootNamespace>Spree.Contracts</RootNamespace>
+    <AssemblyName>Spree.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,18 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Fluent-CQRS">
-      <HintPath>..\packages\Fluent-CQRS\lib\portable-net45+netcore45+wpa81\Fluent-CQRS.dll</HintPath>
-    </Reference>
-    <Reference Include="LightInject">
-      <HintPath>..\packages\LightInject\lib\net45\LightInject.dll</HintPath>
-    </Reference>
-    <Reference Include="Serilog">
-      <HintPath>..\packages\Serilog\lib\net45\Serilog.dll</HintPath>
-    </Reference>
-    <Reference Include="Serilog.FullNetFx">
-      <HintPath>..\packages\Serilog\lib\net45\Serilog.FullNetFx.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,26 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Produkt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Spree.Contracts\Spree.Contracts.csproj">
-      <Project>{fe5af10c-d253-4856-80d6-e4140b49a3f6}</Project>
-      <Name>Spree.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Spree.Domain\Spree.Domain.csproj">
-      <Project>{5061BD1A-87CA-40F9-9EBA-53F7264FFF3D}</Project>
-      <Name>Spree.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Spree.QueryModel\Spree.QueryModel.csproj">
-      <Project>{CD5BD427-D714-4C6C-960F-7C3D152B716A}</Project>
-      <Name>Spree.QueryModel</Name>
-    </ProjectReference>
+    <Compile Include="Warenkorb.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

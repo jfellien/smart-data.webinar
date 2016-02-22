@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using Fluent_CQRS;
 using LightInject;
 using Spree.Domain;
 using Spree.Domain.Commands;
