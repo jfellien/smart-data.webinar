@@ -10,15 +10,15 @@
         "password":"DD77794872523D9A3DD7221F73AD1BDADDDF478E97626FDC9F2A05A97385E44E"
     },
     "eventStore":{
-        "dbName":"eventStore",
+        "dbName":"EventStore",
         "dbType":"document",
         "storageType":"plocal",
-        "name" : "Event",
+        "name" : "EventBag",
         "username":"admin",
         "password":"admin"
     },
     "readModelStore":{
-        "dbName":"readModel",
+        "dbName":"ReadModel",
         "dbType":"graph",
         "storageType":"plocal",
         "username":"admin",

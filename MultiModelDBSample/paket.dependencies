@@ -4,3 +4,4 @@ nuget Fluent-CQRS
 nuget LightInject ~> 3.0
 nuget Serilog
 nuget RestSharp
+nuget FastJson

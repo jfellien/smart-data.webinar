@@ -3,7 +3,7 @@ using System.Linq;
 using Fluent_CQRS;
 using Fluent_CQRS.Extensions;
 using Serilog;
-using Spree.Domain.Events;
+using Spree.Contracts.Events;
 using Spree.Infrastructure.Repositories;
 
 namespace Spree.QueryModel

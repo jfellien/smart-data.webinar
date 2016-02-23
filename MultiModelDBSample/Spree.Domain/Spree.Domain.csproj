@@ -46,10 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\ProduktInDenWarenkorbLegen.cs" />
-    <Compile Include="Events\ProduktWurdeInWarenkorbGelegt.cs" />
     <Compile Include="Model\Warenkorb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WarenkorbCommands.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Spree.Contracts\Spree.Contracts.csproj">
+      <Project>{FE5AF10C-D253-4856-80D6-E4140B49A3F6}</Project>
+      <Name>Spree.Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

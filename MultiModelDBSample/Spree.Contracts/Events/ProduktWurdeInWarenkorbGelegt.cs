@@ -1,6 +1,6 @@
 ﻿using Fluent_CQRS;
 
-namespace Spree.Domain.Events
+namespace Spree.Contracts.Events
 {
     public class ProduktWurdeInWarenkorbGelegt : IAmAnEventMessage
     {

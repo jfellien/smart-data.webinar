@@ -1,6 +1,7 @@
 var config = require("./server-config");
 var restify = require("restify");
 var events = require("./events-repository");
+var readModel = require("./read-model");
 
 // Setup Server
 var server = restify.createServer();
@@ -10,11 +11,14 @@ server.use(restify.bodyParser());
 server.use(restify.authorizationParser());
 server.pre(restify.pre.sanitizePath());
 
-//Setup Routes
-server.get("/events-for/:id", events.get);
-server.post("/event", events.store);
+//Setup EventStore Routes
+server.get("/api/events-for/:id", events.get);
+server.post("/api/event", events.store);
+
+// Setup ReadModel Routes
+server.get("/api/produkt", readModel.produkte);
 
 // Start Server
-server.listen(config.web.port, config.web.host,  () => {
-    console.log("Service is running");
+server.listen(config.web.port,  () => {
+    console.log('%s listening at %s', server.name, server.url);
 });

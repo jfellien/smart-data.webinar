@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Fluent_CQRS;
 using Serilog;
-using Spree.Domain.Events;
+using Spree.Contracts.Events;
 
 namespace Spree.Domain.Model
 {
