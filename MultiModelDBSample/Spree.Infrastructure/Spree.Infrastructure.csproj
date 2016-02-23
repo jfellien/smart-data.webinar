@@ -55,8 +55,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EventBag.cs" />
     <Compile Include="Repositories\EventStore.cs" />
-    <Compile Include="Repositories\MockedProdukteRepository.cs" />
     <Compile Include="Repositories\MockedWarenkörbeRepository.cs" />
+    <Compile Include="Repositories\ProdukteRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Spree.Contracts\Spree.Contracts.csproj">

@@ -16,7 +16,7 @@ server.get("/api/events-for/:id", events.get);
 server.post("/api/event", events.store);
 
 // Setup ReadModel Routes
-server.get("/api/produkt", readModel.produkte);
+server.get("/api/produkte-der-kategorie/:kategorie", readModel.getProdukteDerKategorie);
 
 // Start Server
 server.listen(config.web.port,  () => {

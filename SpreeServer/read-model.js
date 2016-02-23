@@ -2,7 +2,7 @@ var config = require("./server-config");
 var orientDb = require("orientjs");
 
 var dbServer = config.dbServer;
-var readModel = config.readModelStore;
+var readModelConfig = config.readModelStore;
 
 
 var server = orientDb(
@@ -14,25 +14,27 @@ var server = orientDb(
     }
 );
 
-var eventStore = server.use(
+var readModel = server.use(
     {
-        name : readModel.dbName,
-        username : readModel.username,
-        password : readModel.password
+        name : readModelConfig.dbName,
+        username : readModelConfig.username,
+        password : readModelConfig.password
     }
 );
 
 
-exports.getProdukte = (req, res, next) => {
-    eventStore
+exports.getProdukteDerKategorie = (req, res, next) => {
+    
+    var kategorie = req.params["kategorie"];
+    
+    readModel
         .select()
-        .from(esConfig.name)
-        .where({id:id})
+        .from("Produkt")
+        .where({Kategorie:kategorie})
         .column("id")
-        .column("type")
-        .column("timestamp")
-        .column("payload")
-        .order("timestamp")
+        .column("Name")
+        .column("Preis")
+        .column("Kategorie")
         .all()
-        .then((events) => res.json(200, events));
+        .then((produkte) => res.json(200, produkte));
 }
