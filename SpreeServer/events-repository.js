@@ -43,10 +43,10 @@ exports.get = (req, res, next) => {
 exports.store = (req, res, next) => {
     
     var eventBag = {
-        id : req.body.Id,
-        type : req.body.Type,
-        timestamp : req.body.Timestamp,
-        payload : JSON.parse(req.body.Payload)
+        Id : req.body.Id,
+        Type : req.body.Type,
+        Timestamp : req.body.Timestamp,
+        Payload : JSON.parse(req.body.Payload)
     }
     
     console.log("store event %s", JSON.stringify(eventBag));

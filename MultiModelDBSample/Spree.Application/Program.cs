@@ -18,9 +18,6 @@ namespace Spree.Application
             // 1.) Alle Produkte einer Kategorie holen
             var produkte = new Produkte();
             var dvds = produkte.Query(new AlleProdukteDerKategorie("DVD"));
-            // alternative Schreibweisen:
-            // --> produkte.DerKategorie("DVD");
-            // --> produkte.DVDs();
 
             // 2.) Warenkob des Users laden
             var warenkörbe = new Warenkörbe();
